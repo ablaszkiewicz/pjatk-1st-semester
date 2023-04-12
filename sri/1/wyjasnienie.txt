@@ -1,0 +1,9 @@
+Niestety każde inne API, jakie znalazłem nie pozwala w nie uderzać z rapidapi za darmo.
+
+Przetestowałem około 10 API - testowałem tylko te oznaczone na spisie github public apis jako darmowe i niewymagające klucza,
+a mimo tego na rapidapi i tak wymagają subskrypcji.
+
+W tym celu w kolekcji znajdują się foldery:
+- API-rapidapi - tutaj rzeczywiście uderzam przez proxy rapidapi,
+- API-zwykle - tutaj po prostu znalazłem darmowe API i do nich uderzam bezpośrednio bez proxy rapidapi
+- CRUD - tutaj zadanie 2

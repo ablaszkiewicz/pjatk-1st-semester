@@ -1,0 +1,309 @@
+{
+	"info": {
+		"_postman_id": "33b80dc6-78d0-4209-889b-e54d47d2d4e1",
+		"name": "SRI01-Blaszkiewicz-s29711",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18076058"
+	},
+	"item": [
+		{
+			"name": "API-rapidapi",
+			"item": [
+				{
+					"name": "Koty",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-RapidAPI-Key",
+								"value": "68cc264388msh717860818b94d28p1f974bjsne6b65c5dc8c8",
+								"type": "text"
+							},
+							{
+								"key": "X-RapidAPI-Host",
+								"value": "brianiswu-cat-facts-v1.p.rapidapi.com",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://brianiswu-cat-facts-v1.p.rapidapi.com/facts",
+							"protocol": "https",
+							"host": [
+								"brianiswu-cat-facts-v1",
+								"p",
+								"rapidapi",
+								"com"
+							],
+							"path": [
+								"facts"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "API-zwykle",
+			"item": [
+				{
+					"name": "Jedzonko o nazwie \"Arrabiata\"",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "www.themealdb.com/api/json/v1/1/search.php?s=Arrabiata",
+							"host": [
+								"www",
+								"themealdb",
+								"com"
+							],
+							"path": [
+								"api",
+								"json",
+								"v1",
+								"1",
+								"search.php"
+							],
+							"query": [
+								{
+									"key": "s",
+									"value": "Arrabiata"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Jedzonko, które ma składnik \"chicken_breast\"",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "www.themealdb.com/api/json/v1/1/filter.php?i=chicken_breast",
+							"host": [
+								"www",
+								"themealdb",
+								"com"
+							],
+							"path": [
+								"api",
+								"json",
+								"v1",
+								"1",
+								"filter.php"
+							],
+							"query": [
+								{
+									"key": "i",
+									"value": "chicken_breast"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CRUD",
+			"item": [
+				{
+					"name": "Pobierz ludzi",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-apikey",
+								"value": "c249e847cfa7e2ffa3929a367b41193de5f75",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://s29711-2d58.restdb.io/rest/people",
+							"protocol": "https",
+							"host": [
+								"s29711-2d58",
+								"restdb",
+								"io"
+							],
+							"path": [
+								"rest",
+								"people"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pobierz człowieka",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-apikey",
+								"value": "c249e847cfa7e2ffa3929a367b41193de5f75",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://s29711-2d58.restdb.io/rest/people/64075088de72723100000796",
+							"protocol": "https",
+							"host": [
+								"s29711-2d58",
+								"restdb",
+								"io"
+							],
+							"path": [
+								"rest",
+								"people",
+								"64075088de72723100000796"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Zmień człowieka",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-apikey",
+								"value": "c249e847cfa7e2ffa3929a367b41193de5f75",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"_id\": \"64075088de72723100000796\",\r\n  \"email\": \"zmieniony@zmieniony.pl\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://s29711-2d58.restdb.io/rest/people/64075088de72723100000796",
+							"protocol": "https",
+							"host": [
+								"s29711-2d58",
+								"restdb",
+								"io"
+							],
+							"path": [
+								"rest",
+								"people",
+								"64075088de72723100000796"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Usuń człowieka",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-apikey",
+								"value": "c249e847cfa7e2ffa3929a367b41193de5f75",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"_id\": \"64075088de72723100000796\",\r\n  \"email\": \"zmieniony@zmieniony.pl\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://s29711-2d58.restdb.io/rest/people/64075088de72723100000797",
+							"protocol": "https",
+							"host": [
+								"s29711-2d58",
+								"restdb",
+								"io"
+							],
+							"path": [
+								"rest",
+								"people",
+								"64075088de72723100000797"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Dodaj człowieka",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-apikey",
+								"value": "c249e847cfa7e2ffa3929a367b41193de5f75",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"asd@asd.pl\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://s29711-2d58.restdb.io/rest/people/64075088de72723100000797",
+							"protocol": "https",
+							"host": [
+								"s29711-2d58",
+								"restdb",
+								"io"
+							],
+							"path": [
+								"rest",
+								"people",
+								"64075088de72723100000797"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
