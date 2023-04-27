@@ -1,0 +1,104 @@
+{
+	"info": {
+		"_postman_id": "2ef8d62b-0c25-4920-be6b-c9c31c11f029",
+		"name": "SRI2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18076058"
+	},
+	"item": [
+		{
+			"name": "Get all dogs",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Get one dog",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Create dog",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"breed\": \"German Shepherd\",\r\n    \"name\": \"Aron\",\r\n    \"age\": 11\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/dogs",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"dogs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete dog",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"breed\": \"German Shepherd\",\r\n    \"name\": \"Aron\",\r\n    \"age\": 11\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/dogs/<insert-id-here>",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"dogs",
+						"<insert-id-here>"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit dog",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Max edited\"\r\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/dogs/8d8d1896-0bfe-4411-9a88-c8b56d671ed2",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"dogs",
+						"8d8d1896-0bfe-4411-9a88-c8b56d671ed2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
