@@ -1,0 +1,22 @@
+2. MATCH (a:Airport)-[:ORIGIN]-(f:Flight)
+WITH a, count(f) AS flightCount
+RETURN a.name AS Airport, flightCount
+ORDER BY flightCount DESC
+
+3. Nie wiem, jak zrobić niebezpośrednie, więc tutaj bezpośrednie
+MATCH p=(lax:Airport {name:'LAX'})-[:ORIGIN]-(f:Flight)-[:DESTINATION]-(destination:Airport)
+MATCH (f)-[assign:ASSIGN]-(ticket:Ticket)
+WHERE ticket.price < 3000
+RETURN destination
+
+4. Nie ma połączeń z LAX do DAY
+5. Nie ma połączeń z LAX do DAY
+6. Nie ma połączeń z LAX do DAY
+7. MATCH p=((:Airport)-[:ORIGIN]-(f:Flight)-[:DESTINATION]-(:Airport))
+RETURN count(p), f.airline
+
+8. MATCH p=(:Airport)-[:ORIGIN]-(f1:Flight)-[:DESTINATION]-(:Airport)-[:ORIGIN]-(:Flight)-[:DESTINATION]-(:Airport)
+MATCH (f1)-[]-(t1:Ticket)
+MATCH (f2)-[]-(t2:Ticket)
+return t1.price+t2.price as price
+ORDER BY price ASC LIMIT 1 

@@ -1,0 +1,19 @@
+2. MATCH p = (start:town {name: "Darjeeling"})-[:trek|road|twowheeler*]-(end:peak {name: "Sandakphu"}) RETURN p
+3. MATCH p = shortestPath((start:town {name: "Darjeeling"})-[:trek|road|twowheeler*]-(end:peak {name: "Sandakphu"})) RETURN p
+4. MATCH p = shortestPath((start:town {name: "Darjeeling"})-[:trek|road|twowheeler*]-(end:peak {name: "Sandakphu"}))
+WHERE ALL(rel IN relationships(p) WHERE rel.winter = 'true')
+RETURN p
+5. MATCH p = (start:town {name: "Darjeeling"})-[:trek|road|twowheeler*]-(end:peak {name: "Sandakphu"})
+RETURN p 
+ORDER BY reduce(totalDistance = 0, r in relationships(p) | totalDistance + r.distance) ASC LIMIT 3
+
+tutaj nie starcza RAMu na wykonanie query
+
+6. MATCH p = (:town {name: "Darjeeling"})-[:twowheeler*]-(:peak {name: "Sandakphu"})
+WHERE ALL(rel IN relationships(p) WHERE rel.summer = 'true')
+RETURN p
+
+7. MATCH (start:town {name: "Darjeeling"})-[:twowheeler{summer: 'true'}]->(end)
+RETURN DISTINCT end
+
+Nie ma w ogóle takich miejsc

@@ -1,0 +1,167 @@
+[
+  {
+    "actor": {
+      "identity": 4,
+      "labels": ["Person"],
+      "properties": {
+        "born": 1960,
+        "name": "Hugo Weaving"
+      },
+      "elementId": "4:d43be5b3-5e51-4c1c-ac5d-c5ce39c5d163:4"
+    },
+    "movie": {
+      "identity": 105,
+      "labels": ["Movie"],
+      "properties": {
+        "tagline": "Everything is connected",
+        "title": "Cloud Atlas",
+        "released": 2012
+      },
+      "elementId": "4:d43be5b3-5e51-4c1c-ac5d-c5ce39c5d163:105"
+    },
+    "r": {
+      "identity": 138,
+      "start": 4,
+      "end": 105,
+      "type": "ACTED_IN",
+      "properties": {
+        "roles": ["Bill Smoke", "Haskell Moore", "Tadeusz Kesselring", "Nurse Noakes", "Boardman Mephi", "Old Georgie"]
+      },
+      "elementId": "5:d43be5b3-5e51-4c1c-ac5d-c5ce39c5d163:138",
+      "startNodeElementId": "4:d43be5b3-5e51-4c1c-ac5d-c5ce39c5d163:4",
+      "endNodeElementId": "4:d43be5b3-5e51-4c1c-ac5d-c5ce39c5d163:105"
+    }
+  },
+  {
+    "actor": {
+      "identity": 4,
+      "labels": ["Person"],
+      "properties": {
+        "born": 1960,
+        "name": "Hugo Weaving"
+      },
+      "elementId": "4:d43be5b3-5e51-4c1c-ac5d-c5ce39c5d163:4"
+    },
+    "movie": {
+      "identity": 116,
+      "labels": ["Movie"],
+      "properties": {
+        "tagline": "Freedom! Forever!",
+        "title": "V for Vendetta",
+        "released": 2006
+      },
+      "elementId": "4:d43be5b3-5e51-4c1c-ac5d-c5ce39c5d163:116"
+    },
+    "r": {
+      "identity": 151,
+      "start": 4,
+      "end": 116,
+      "type": "ACTED_IN",
+      "properties": {
+        "roles": ["V"]
+      },
+      "elementId": "5:d43be5b3-5e51-4c1c-ac5d-c5ce39c5d163:151",
+      "startNodeElementId": "4:d43be5b3-5e51-4c1c-ac5d-c5ce39c5d163:4",
+      "endNodeElementId": "4:d43be5b3-5e51-4c1c-ac5d-c5ce39c5d163:116"
+    }
+  },
+  {
+    "actor": {
+      "identity": 4,
+      "labels": ["Person"],
+      "properties": {
+        "born": 1960,
+        "name": "Hugo Weaving"
+      },
+      "elementId": "4:d43be5b3-5e51-4c1c-ac5d-c5ce39c5d163:4"
+    },
+    "movie": {
+      "identity": 10,
+      "labels": ["Movie"],
+      "properties": {
+        "tagline": "Everything that has a beginning has an end",
+        "title": "The Matrix Revolutions",
+        "released": 2003
+      },
+      "elementId": "4:d43be5b3-5e51-4c1c-ac5d-c5ce39c5d163:10"
+    },
+    "r": {
+      "identity": 18,
+      "start": 4,
+      "end": 10,
+      "type": "ACTED_IN",
+      "properties": {
+        "roles": ["Agent Smith"]
+      },
+      "elementId": "5:d43be5b3-5e51-4c1c-ac5d-c5ce39c5d163:18",
+      "startNodeElementId": "4:d43be5b3-5e51-4c1c-ac5d-c5ce39c5d163:4",
+      "endNodeElementId": "4:d43be5b3-5e51-4c1c-ac5d-c5ce39c5d163:10"
+    }
+  },
+  {
+    "actor": {
+      "identity": 4,
+      "labels": ["Person"],
+      "properties": {
+        "born": 1960,
+        "name": "Hugo Weaving"
+      },
+      "elementId": "4:d43be5b3-5e51-4c1c-ac5d-c5ce39c5d163:4"
+    },
+    "movie": {
+      "identity": 9,
+      "labels": ["Movie"],
+      "properties": {
+        "tagline": "Free your mind",
+        "title": "The Matrix Reloaded",
+        "released": 2003
+      },
+      "elementId": "4:d43be5b3-5e51-4c1c-ac5d-c5ce39c5d163:9"
+    },
+    "r": {
+      "identity": 11,
+      "start": 4,
+      "end": 9,
+      "type": "ACTED_IN",
+      "properties": {
+        "roles": ["Agent Smith"]
+      },
+      "elementId": "5:d43be5b3-5e51-4c1c-ac5d-c5ce39c5d163:11",
+      "startNodeElementId": "4:d43be5b3-5e51-4c1c-ac5d-c5ce39c5d163:4",
+      "endNodeElementId": "4:d43be5b3-5e51-4c1c-ac5d-c5ce39c5d163:9"
+    }
+  },
+  {
+    "actor": {
+      "identity": 4,
+      "labels": ["Person"],
+      "properties": {
+        "born": 1960,
+        "name": "Hugo Weaving"
+      },
+      "elementId": "4:d43be5b3-5e51-4c1c-ac5d-c5ce39c5d163:4"
+    },
+    "movie": {
+      "identity": 0,
+      "labels": ["Movie"],
+      "properties": {
+        "tagline": "Welcome to the Real World",
+        "title": "The Matrix",
+        "released": 1999
+      },
+      "elementId": "4:d43be5b3-5e51-4c1c-ac5d-c5ce39c5d163:0"
+    },
+    "r": {
+      "identity": 3,
+      "start": 4,
+      "end": 0,
+      "type": "ACTED_IN",
+      "properties": {
+        "roles": ["Agent Smith"]
+      },
+      "elementId": "5:d43be5b3-5e51-4c1c-ac5d-c5ce39c5d163:3",
+      "startNodeElementId": "4:d43be5b3-5e51-4c1c-ac5d-c5ce39c5d163:4",
+      "endNodeElementId": "4:d43be5b3-5e51-4c1c-ac5d-c5ce39c5d163:0"
+    }
+  }
+]

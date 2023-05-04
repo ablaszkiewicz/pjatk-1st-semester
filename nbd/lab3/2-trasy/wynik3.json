@@ -1,0 +1,142 @@
+[
+  {
+    "p": {
+      "start": {
+        "identity": 179,
+        "labels": [
+          "town"
+        ],
+        "properties": {
+          "name": "Darjeeling"
+        },
+        "elementId": "4:d43be5b3-5e51-4c1c-ac5d-c5ce39c5d163:179"
+      },
+      "end": {
+        "identity": 181,
+        "labels": [
+          "peak"
+        ],
+        "properties": {
+          "altitude": "12400 ft",
+          "name": "Sandakphu"
+        },
+        "elementId": "4:d43be5b3-5e51-4c1c-ac5d-c5ce39c5d163:181"
+      },
+      "segments": [
+        {
+          "start": {
+            "identity": 179,
+            "labels": [
+              "town"
+            ],
+            "properties": {
+              "name": "Darjeeling"
+            },
+            "elementId": "4:d43be5b3-5e51-4c1c-ac5d-c5ce39c5d163:179"
+          },
+          "relationship": {
+            "identity": 261,
+            "start": 179,
+            "end": 178,
+            "type": "trek",
+            "properties": {
+              "distance": 15,
+              "name": "Darjeeling-Rimbik",
+              "winter": "true",
+              "summer": "true"
+            },
+            "elementId": "5:d43be5b3-5e51-4c1c-ac5d-c5ce39c5d163:261",
+            "startNodeElementId": "4:d43be5b3-5e51-4c1c-ac5d-c5ce39c5d163:179",
+            "endNodeElementId": "4:d43be5b3-5e51-4c1c-ac5d-c5ce39c5d163:178"
+          },
+          "end": {
+            "identity": 178,
+            "labels": [
+              "town"
+            ],
+            "properties": {
+              "name": "Rimbik"
+            },
+            "elementId": "4:d43be5b3-5e51-4c1c-ac5d-c5ce39c5d163:178"
+          }
+        },
+        {
+          "start": {
+            "identity": 178,
+            "labels": [
+              "town"
+            ],
+            "properties": {
+              "name": "Rimbik"
+            },
+            "elementId": "4:d43be5b3-5e51-4c1c-ac5d-c5ce39c5d163:178"
+          },
+          "relationship": {
+            "identity": 262,
+            "start": 178,
+            "end": 180,
+            "type": "trek",
+            "properties": {
+              "distance": 18,
+              "name": "Rimbik-BhikeBhanja",
+              "winter": "true",
+              "summer": "true"
+            },
+            "elementId": "5:d43be5b3-5e51-4c1c-ac5d-c5ce39c5d163:262",
+            "startNodeElementId": "4:d43be5b3-5e51-4c1c-ac5d-c5ce39c5d163:178",
+            "endNodeElementId": "4:d43be5b3-5e51-4c1c-ac5d-c5ce39c5d163:180"
+          },
+          "end": {
+            "identity": 180,
+            "labels": [
+              "village"
+            ],
+            "properties": {
+              "name": "BhikeBhanja"
+            },
+            "elementId": "4:d43be5b3-5e51-4c1c-ac5d-c5ce39c5d163:180"
+          }
+        },
+        {
+          "start": {
+            "identity": 180,
+            "labels": [
+              "village"
+            ],
+            "properties": {
+              "name": "BhikeBhanja"
+            },
+            "elementId": "4:d43be5b3-5e51-4c1c-ac5d-c5ce39c5d163:180"
+          },
+          "relationship": {
+            "identity": 263,
+            "start": 180,
+            "end": 181,
+            "type": "trek",
+            "properties": {
+              "distance": 4,
+              "name": "BhikeBhanja-Sandakphu",
+              "winter": "true",
+              "summer": "true"
+            },
+            "elementId": "5:d43be5b3-5e51-4c1c-ac5d-c5ce39c5d163:263",
+            "startNodeElementId": "4:d43be5b3-5e51-4c1c-ac5d-c5ce39c5d163:180",
+            "endNodeElementId": "4:d43be5b3-5e51-4c1c-ac5d-c5ce39c5d163:181"
+          },
+          "end": {
+            "identity": 181,
+            "labels": [
+              "peak"
+            ],
+            "properties": {
+              "altitude": "12400 ft",
+              "name": "Sandakphu"
+            },
+            "elementId": "4:d43be5b3-5e51-4c1c-ac5d-c5ce39c5d163:181"
+          }
+        }
+      ],
+      "length": 3.0
+    }
+  }
+]

@@ -1,0 +1,30 @@
+2. MATCH (actor:Person {name: "Hugo Weaving"})-[r:ACTED_IN]->(movie:Movie) RETURN actor, movie, r
+3. MATCH (actor:Person {name: "Hugo Weaving"})-[r1:ACTED_IN]->(movie:Movie)<-[r2:DIRECTED]-(director:Person) RETURN actor, r1, r2,director,movie
+4. MATCH (actor:Person {name: "Hugo Weaving"})-[r1:ACTED_IN]->(movie:Movie)<-[r2:ACTED_IN]-(co_actor:Person) RETURN actor, r1, r2, movie, co_actor
+5. MATCH (actor:Person)-[:ACTED_IN]->(movie:Movie) RETURN actor.name AS actor
+6. MATCH (person:Person)-[:WROTE]->(movie:Movie)<-[:DIRECTED]-(person) RETURN person.name AS person, movie.title
+7. MATCH (hugo:Person {name: "Hugo Weaving"})-[:ACTED_IN]->(movie:Movie)<-[:ACTED_IN]-(keanu:Person {name: "Keanu Reeves"}) RETURN movie.title
+
+8 tworzenie
+CREATE (:Person {name: "Joe Johnston"})
+CREATE (:Person {name: "Christopher Markus"}), (:Person {name: "Stephen McFeely"})
+CREATE (:Person {name: "Chris Evans"}), (:Person {name: "Hayley Atwell"}), (:Person {name: "Sebastian Stan"})
+MATCH (director:Person {name: "Joe Johnston"})
+MATCH (writer1:Person {name: "Christopher Markus"})
+MATCH (writer2:Person {name: "Stephen McFeely"})
+MATCH (actor1:Person {name: "Chris Evans"})
+MATCH (actor2:Person {name: "Hayley Atwell"})
+MATCH (actor3:Person {name: "Sebastian Stan"})
+CREATE (movie:Movie {title: "Captain America: The First Avenger"})
+CREATE (director)-[:DIRECTED]->(movie)
+CREATE (writer1)-[:WROTE]->(movie)
+CREATE (writer2)-[:WROTE]->(movie)
+CREATE (actor1)-[:ACTED_IN]->(movie)
+CREATE (actor2)-[:ACTED_IN]->(movie)
+CREATE (actor3)-[:ACTED_IN]->(movie)
+
+8 pokazanie
+MATCH (movie:Movie {title: "Captain America: The First Avenger"})<-[r1:ACTED_IN]-(actor:Person)
+MATCH (movie)<-[r2:DIRECTED]-(director:Person)
+MATCH (movie)<-[r3:WROTE]-(writer:Person)
+RETURN movie, actor, director, writer, r1, r2, r3
