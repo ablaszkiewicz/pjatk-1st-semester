@@ -28,6 +28,33 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+
+      <s:element name="AddDogRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="name" type="s:string"/>
+            <s:element minOccurs="1" maxOccurs="1" name="age" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddDogResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="unbounded" name="result" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+
+      <s:element name="ViewDogsRequest">
+      </s:element>
+
+      <s:element name="ViewDogsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="unbounded" name="result" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
     </s:schema>
   </wsdl:types>
   <!-- MESSAGES: defines the data being exchanged between the service and client -->
@@ -37,19 +64,64 @@
   <wsdl:message name="MessageSplitterSoapOut">
     <wsdl:part name="parameters" element="tns:MessageSplitterResponse"/>
   </wsdl:message>
+
+  <wsdl:message name="AddDogSoapIn">
+    <wsdl:part name="parameters" element="tns:AddDogRequest"/>
+  </wsdl:message>
+  <wsdl:message name="AddDogSoapOut">
+    <wsdl:part name="parameters" element="tns:AddDogResponse"/>
+  </wsdl:message>
+
+  <wsdl:message name="ViewDogsSoapIn">
+    <wsdl:part name="parameters" element="tns:ViewDogsRequest"/>
+  </wsdl:message>
+  <wsdl:message name="ViewDogsSoapOut">
+    <wsdl:part name="parameters" element="tns:ViewDogsResponse"/>
+  </wsdl:message>
   <!-- PORT TYPES: defines the complete communication operation (one way/round trip) -->
-  <wsdl:portType name="MessageSplitterSoapPort">
+  <wsdl:portType name="AppSoapPort">
     <!-- The operation name must be the same as the one specified in the service object -->
     <wsdl:operation name="MessageSplitter">
       <wsdl:input message="tns:MessageSplitterSoapIn"/>
       <wsdl:output message="tns:MessageSplitterSoapOut"/>
     </wsdl:operation>
+
+    <wsdl:operation name="AddDog">
+      <wsdl:input message="tns:AddDogSoapIn"/>
+      <wsdl:output message="tns:AddDogSoapOut"/>
+    </wsdl:operation>
+
+    <wsdl:operation name="ViewDogs">
+      <wsdl:input message="tns:ViewDogsSoapIn"/>
+      <wsdl:output message="tns:ViewDogsSoapOut"/>
+    </wsdl:operation>
   </wsdl:portType>
   <!-- BINDING: provides details on how a portType operation will actually be transmitted -->
-  <wsdl:binding name="AppServicePortBinding" type="tns:MessageSplitterSoapPort">
+  <wsdl:binding name="AppServicePortBinding" type="tns:AppSoapPort">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+
     <wsdl:operation name="MessageSplitter">
       <soap:operation soapAction="MessageSplitter" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+
+    <wsdl:operation name="AddDog">
+      <soap:operation soapAction="AddDog" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+
+    <wsdl:operation name="ViewDogs">
+      <soap:operation soapAction="ViewDogs" style="document"/>
       <wsdl:input>
         <soap:body use="literal"/>
       </wsdl:input>

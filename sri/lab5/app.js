@@ -4,9 +4,10 @@
 var soap = require('soap');
 var express = require('express');
 var fs = require('fs');
+var dogs = [];
 
 // the splitter function, used by the service
-function splitter_function(args) {
+function splitterFunction(args) {
   console.log('splitter_function');
   var splitter = args.splitter;
   var splitted_msg = args.message.split(splitter);
@@ -19,11 +20,29 @@ function splitter_function(args) {
   };
 }
 
+function addDog(args) {
+  dogs.push({
+    name: args.name,
+    age: args.age,
+  });
+  return {
+    result: `Added dog ${args.name} with age ${args.age}`,
+  };
+}
+
+function viewDogs(args) {
+  return {
+    result: dogs,
+  };
+}
+
 // the service
 var serviceObject = {
   AppService: {
     AppServiceSoapPort: {
-      MessageSplitter: splitter_function,
+      MessageSplitter: splitterFunction,
+      AddDog: addDog,
+      ViewDogs: viewDogs,
     },
   },
 };
