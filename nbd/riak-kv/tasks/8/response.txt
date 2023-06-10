@@ -1,0 +1,7 @@
+HTTP/1.1 201 Created
+Vary: Accept-Encoding
+Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+Location: /riak/s29711/2uQ9Y3LkaCfQh1jH6mwpVbyzuNt
+Date: Sat, 10 Jun 2023 11:13:25 GMT
+Content-Type: application/json
+Content-Length: 0

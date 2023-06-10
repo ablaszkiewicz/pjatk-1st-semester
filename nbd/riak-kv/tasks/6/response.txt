@@ -1,0 +1,16 @@
+HTTP/1.1 204 No Content
+Vary: Accept-Encoding
+Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+Date: Sat, 10 Jun 2023 11:11:00 GMT
+Content-Type: application/json
+Content-Length: 0
+
+HTTP/1.1 404 Object Not Found
+X-Riak-Vclock: a85hYGBgzGDKBVI8+xkWvr8XknMGIpTIl8fK4HLtx12+LAA=
+X-Riak-Deleted: true
+Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+Date: Sat, 10 Jun 2023 11:11:00 GMT
+Content-Type: text/plain
+Content-Length: 10
+
+not found

@@ -1,0 +1,19 @@
+HTTP/1.1 204 No Content
+Vary: Accept-Encoding
+Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+Date: Sat, 10 Jun 2023 11:07:37 GMT
+Content-Type: application/json
+Content-Length: 0
+
+HTTP/1.1 200 OK
+X-Riak-Vclock: a85hYGBgzGDKBVI8+xkWvr8XknMGIpTIncfKUHn1x12+LAA=
+Vary: Accept-Encoding
+Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+Link: </riak/s29711>; rel="up"
+Last-Modified: Sat, 10 Jun 2023 11:07:37 GMT
+ETag: "3GMt0nT43uxdzTEBCezAku"
+Date: Sat, 10 Jun 2023 11:07:37 GMT
+Content-Type: application/json
+Content-Length: 52
+
+{"1": "123", "2": 123, "3": 123, "4": 123, "5": 123}%
