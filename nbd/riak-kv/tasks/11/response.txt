@@ -1,0 +1,39 @@
+Dodano dokument do bazy.
+Odpowiedź serwera: 204
+
+Pobrany dokument:
+{
+    "field1": "value1",
+    "field2": 123,
+    "field3": [
+        "a",
+        "b",
+        "c"
+    ],
+    "field4": {
+        "nested_field": "nested_value"
+    }
+}
+
+Dokument zaktualizowany w bazie.
+Odpowiedź serwera: 204
+
+Zaktualizowany dokument:
+{
+    "field1": "value1",
+    "field2": 123,
+    "field3": [
+        "a",
+        "b",
+        "c"
+    ],
+    "field4": {
+        "nested_field": "nested_value"
+    },
+    "new_field": "new_value"
+}
+
+Dokument usunięty z bazy.
+Odpowiedź serwera: 204
+
+Dokument nie istnieje w bazie. Pobranie nieudane.
