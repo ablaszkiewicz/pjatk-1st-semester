@@ -1,0 +1,157 @@
+2023.06.11 11:27:04 INFO  Started: Metals version 0.11.12 in workspace '/Users/aleksander.blaszkiewicz/Documents/repos/pjatk-1st-semester/nbd/scala' for client Visual Studio Code - Insiders 1.80.0-insider.
+Jun 11, 2023 11:27:04 AM org.flywaydb.core.internal.license.VersionPrinter printVersionOnly
+INFO: Flyway Community Edition 9.16.3 by Redgate
+Jun 11, 2023 11:27:04 AM org.flywaydb.core.internal.license.VersionPrinter printVersion
+INFO: See release notes here: https://rd.gt/416ObMi
+Jun 11, 2023 11:27:04 AM org.flywaydb.core.internal.license.VersionPrinter printVersion
+INFO: 
+Jun 11, 2023 11:27:04 AM org.flywaydb.core.internal.database.base.BaseDatabaseType createDatabase
+INFO: Database: jdbc:h2:file:/Users/aleksander.blaszkiewicz/Documents/repos/pjatk-1st-semester/nbd/scala/.metals/metals (H2 2.1)
+Jun 11, 2023 11:27:04 AM org.flywaydb.core.internal.schemahistory.JdbcTableSchemaHistory allAppliedMigrations
+INFO: Schema history table "PUBLIC"."flyway_schema_history" does not exist yet
+Jun 11, 2023 11:27:04 AM org.flywaydb.core.internal.command.DbValidate validate
+INFO: Successfully validated 4 migrations (execution time 00:00.024s)
+Jun 11, 2023 11:27:04 AM org.flywaydb.core.internal.schemahistory.JdbcTableSchemaHistory create
+INFO: Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+Jun 11, 2023 11:27:04 AM org.flywaydb.core.internal.command.DbMigrate migrateGroup
+INFO: Current version of schema "PUBLIC": << Empty Schema >>
+Jun 11, 2023 11:27:04 AM org.flywaydb.core.internal.command.DbMigrate doMigrateGroup
+INFO: Migrating schema "PUBLIC" to version "1 - Create tables"
+Jun 11, 2023 11:27:04 AM org.flywaydb.core.internal.command.DbMigrate doMigrateGroup
+INFO: Migrating schema "PUBLIC" to version "2 - Server discovery"
+Jun 11, 2023 11:27:04 AM org.flywaydb.core.internal.command.DbMigrate doMigrateGroup
+INFO: Migrating schema "PUBLIC" to version "3 - Jar symbols"
+Jun 11, 2023 11:27:04 AM org.flywaydb.core.internal.command.DbMigrate doMigrateGroup
+INFO: Migrating schema "PUBLIC" to version "4 - Fingerprints"
+Jun 11, 2023 11:27:04 AM org.flywaydb.core.internal.command.DbMigrate logSummary
+INFO: Successfully applied 4 migrations to schema "PUBLIC", now at version v4 (execution time 00:00.135s)
+2023.06.11 11:27:04 INFO  time: initialize in 0.94s
+2023.06.11 11:27:09 WARN  Build server is not auto-connectable.
+2023.06.11 11:28:01 WARN  no build target for: /Users/aleksander.blaszkiewicz/Documents/repos/pjatk-1st-semester/nbd/scala/src/main/scala/example/Hello.scala
+2023.06.11 11:28:13 INFO  no build target found for /Users/aleksander.blaszkiewicz/Documents/repos/pjatk-1st-semester/nbd/scala/src/main/scala/example/Hello.scala. Using presentation compiler with project's scala-library version: 3.2.2
+2023.06.11 11:28:15 INFO  time: code lens generation in 13s
+Exception in thread "pool-3-thread-1" java.lang.InterruptedException
+	at scala.meta.internal.metals.FutureCancelToken.checkCanceled(FutureCancelToken.scala:29)
+	at scala.meta.internal.pc.CompilerAccess.onCompilerJobQueue$$anonfun$1(CompilerAccess.scala:195)
+	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:152)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023.06.11 11:30:23 WARN  no build target for: /Users/aleksander.blaszkiewicz/Documents/repos/pjatk-1st-semester/nbd/scala/src/main/scala/example/Hello.scala
+2023.06.11 11:35:49 WARN  no build target for: /Users/aleksander.blaszkiewicz/Documents/repos/pjatk-1st-semester/nbd/scala/src/main/scala/example/Hello.scala
+2023.06.11 11:37:35 WARN  no build target for: /Users/aleksander.blaszkiewicz/Documents/repos/pjatk-1st-semester/nbd/scala/src/main/scala/example/Hello.scala
+2023.06.11 11:38:57 WARN  no build target for: /Users/aleksander.blaszkiewicz/Documents/repos/pjatk-1st-semester/nbd/scala/src/main/scala/example/Hello.scala
+2023.06.11 11:38:58 WARN  no build target for: /Users/aleksander.blaszkiewicz/Documents/repos/pjatk-1st-semester/nbd/scala/src/main/scala/example/Hello.scala
+2023.06.11 11:38:59 WARN  no build target for: /Users/aleksander.blaszkiewicz/Documents/repos/pjatk-1st-semester/nbd/scala/src/main/scala/example/Hello.scala
+2023.06.11 11:41:04 WARN  no build target for: /Users/aleksander.blaszkiewicz/Documents/repos/pjatk-1st-semester/nbd/scala/src/main/scala/example/Hello.scala
+2023.06.11 11:41:04 WARN  no build target for: /Users/aleksander.blaszkiewicz/Documents/repos/pjatk-1st-semester/nbd/scala/src/main/scala/example/Hello.scala
+Exception in thread "pool-3-thread-2" java.lang.InterruptedException
+	at scala.meta.internal.metals.FutureCancelToken.checkCanceled(FutureCancelToken.scala:29)
+	at scala.meta.internal.pc.CompilerAccess.onCompilerJobQueue$$anonfun$1(CompilerAccess.scala:195)
+	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:152)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Jun 11, 2023 11:41:05 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 233
+2023.06.11 11:41:05 WARN  no build target for: /Users/aleksander.blaszkiewicz/Documents/repos/pjatk-1st-semester/nbd/scala/src/main/scala/example/Hello.scala
+2023.06.11 11:41:12 WARN  no build target for: /Users/aleksander.blaszkiewicz/Documents/repos/pjatk-1st-semester/nbd/scala/src/main/scala/example/Hello.scala
+2023.06.11 11:41:16 WARN  no build target for: /Users/aleksander.blaszkiewicz/Documents/repos/pjatk-1st-semester/nbd/scala/src/main/scala/example/Hello.scala
+2023.06.11 11:41:19 WARN  no build target for: /Users/aleksander.blaszkiewicz/Documents/repos/pjatk-1st-semester/nbd/scala/src/main/scala/example/Hello.scala
+2023.06.11 11:42:07 WARN  no build target for: /Users/aleksander.blaszkiewicz/Documents/repos/pjatk-1st-semester/nbd/scala/src/main/scala/example/Hello.scala
+2023.06.11 11:42:09 INFO  time: code lens generation in 1.16s
+2023.06.11 11:43:12 INFO  time: code lens generation in 1.89s
+2023.06.11 11:44:19 WARN  no build target for: /Users/aleksander.blaszkiewicz/Documents/repos/pjatk-1st-semester/nbd/scala/src/main/scala/example/Hello.scala
+2023.06.11 11:45:53 WARN  no build target for: /Users/aleksander.blaszkiewicz/Documents/repos/pjatk-1st-semester/nbd/scala/src/main/scala/example/Hello.scala
+2023.06.11 11:49:41 WARN  no build target for: /Users/aleksander.blaszkiewicz/Documents/repos/pjatk-1st-semester/nbd/scala/src/main/scala/example/Hello.scala
+Jun 11, 2023 11:49:45 AM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: NoDenotation.owner
+java.lang.AssertionError: NoDenotation.owner
+	at dotty.tools.dotc.core.SymDenotations$NoDenotation$.owner(SymDenotations.scala:2511)
+	at scala.meta.internal.pc.MetalsInteractive$.enclosingSymbolsWithExpressionType(MetalsInteractive.scala:261)
+	at scala.meta.internal.pc.MetalsInteractive$.enclosingSymbols(MetalsInteractive.scala:167)
+	at scala.meta.internal.pc.PcDefinitionProvider.findDefinitions(PcDefinitionProvider.scala:91)
+	at scala.meta.internal.pc.PcDefinitionProvider.definitions(PcDefinitionProvider.scala:56)
+	at scala.meta.internal.pc.PcDefinitionProvider.definitions(PcDefinitionProvider.scala:33)
+
+Jun 11, 2023 11:49:48 AM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: NoDenotation.owner
+java.lang.AssertionError: NoDenotation.owner
+	at dotty.tools.dotc.core.SymDenotations$NoDenotation$.owner(SymDenotations.scala:2511)
+	at scala.meta.internal.pc.MetalsInteractive$.enclosingSymbolsWithExpressionType(MetalsInteractive.scala:261)
+	at scala.meta.internal.pc.HoverProvider$.hover(HoverProvider.scala:98)
+
+2023.06.11 11:50:01 WARN  no build target for: /Users/aleksander.blaszkiewicz/Documents/repos/pjatk-1st-semester/nbd/scala/src/main/scala/example/Hello.scala
+2023.06.11 11:50:18 WARN  no build target for: /Users/aleksander.blaszkiewicz/Documents/repos/pjatk-1st-semester/nbd/scala/src/main/scala/example/Hello.scala
+2023.06.11 11:50:20 WARN  no build target for: /Users/aleksander.blaszkiewicz/Documents/repos/pjatk-1st-semester/nbd/scala/src/main/scala/example/Hello.scala
+2023.06.11 11:50:47 WARN  no build target for: /Users/aleksander.blaszkiewicz/Documents/repos/pjatk-1st-semester/nbd/scala/src/main/scala/example/Hello.scala
+2023.06.11 11:51:43 WARN  no build target for: /Users/aleksander.blaszkiewicz/Documents/repos/pjatk-1st-semester/nbd/scala/src/main/scala/example/Hello.scala
+2023.06.11 11:53:38 WARN  no build target for: /Users/aleksander.blaszkiewicz/Documents/repos/pjatk-1st-semester/nbd/scala/src/main/scala/example/Hello.scala
+2023.06.11 11:54:06 WARN  no build target for: /Users/aleksander.blaszkiewicz/Documents/repos/pjatk-1st-semester/nbd/scala/src/main/scala/example/Hello.scala
+2023.06.11 11:54:06 WARN  no build target for: /Users/aleksander.blaszkiewicz/Documents/repos/pjatk-1st-semester/nbd/scala/src/main/scala/example/Hello.scala
+Jun 11, 2023 11:54:06 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 619
+2023.06.11 11:54:14 WARN  no build target for: /Users/aleksander.blaszkiewicz/Documents/repos/pjatk-1st-semester/nbd/scala/src/main/scala/example/Hello.scala
+2023.06.11 11:54:19 WARN  no build target for: /Users/aleksander.blaszkiewicz/Documents/repos/pjatk-1st-semester/nbd/scala/src/main/scala/example/Hello.scala
+2023.06.11 11:55:21 WARN  no build target for: /Users/aleksander.blaszkiewicz/Documents/repos/pjatk-1st-semester/nbd/scala/src/main/scala/example/Hello.scala
+Jun 11, 2023 11:55:22 AM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: NoDenotation.owner
+java.lang.AssertionError: NoDenotation.owner
+	at dotty.tools.dotc.core.SymDenotations$NoDenotation$.owner(SymDenotations.scala:2511)
+	at scala.meta.internal.pc.MetalsInteractive$.enclosingSymbolsWithExpressionType(MetalsInteractive.scala:261)
+	at scala.meta.internal.pc.MetalsInteractive$.enclosingSymbols(MetalsInteractive.scala:167)
+	at scala.meta.internal.pc.PcDefinitionProvider.findDefinitions(PcDefinitionProvider.scala:91)
+	at scala.meta.internal.pc.PcDefinitionProvider.definitions(PcDefinitionProvider.scala:56)
+	at scala.meta.internal.pc.PcDefinitionProvider.definitions(PcDefinitionProvider.scala:33)
+
+Jun 11, 2023 11:55:23 AM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: NoDenotation.owner
+java.lang.AssertionError: NoDenotation.owner
+	at dotty.tools.dotc.core.SymDenotations$NoDenotation$.owner(SymDenotations.scala:2511)
+	at scala.meta.internal.pc.MetalsInteractive$.enclosingSymbolsWithExpressionType(MetalsInteractive.scala:261)
+	at scala.meta.internal.pc.MetalsInteractive$.enclosingSymbols(MetalsInteractive.scala:167)
+	at scala.meta.internal.pc.PcDefinitionProvider.findDefinitions(PcDefinitionProvider.scala:91)
+	at scala.meta.internal.pc.PcDefinitionProvider.definitions(PcDefinitionProvider.scala:56)
+	at scala.meta.internal.pc.PcDefinitionProvider.definitions(PcDefinitionProvider.scala:33)
+
+2023.06.11 11:55:49 WARN  no build target for: /Users/aleksander.blaszkiewicz/Documents/repos/pjatk-1st-semester/nbd/scala/src/main/scala/example/Hello.scala
+2023.06.11 11:56:14 WARN  no build target for: /Users/aleksander.blaszkiewicz/Documents/repos/pjatk-1st-semester/nbd/scala/src/main/scala/example/Hello.scala
+Jun 11, 2023 11:56:15 AM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: NoDenotation.owner
+java.lang.AssertionError: NoDenotation.owner
+	at dotty.tools.dotc.core.SymDenotations$NoDenotation$.owner(SymDenotations.scala:2511)
+	at scala.meta.internal.pc.MetalsInteractive$.enclosingSymbolsWithExpressionType(MetalsInteractive.scala:261)
+	at scala.meta.internal.pc.HoverProvider$.hover(HoverProvider.scala:98)
+
+Jun 11, 2023 11:56:18 AM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: NoDenotation.owner
+java.lang.AssertionError: NoDenotation.owner
+	at dotty.tools.dotc.core.SymDenotations$NoDenotation$.owner(SymDenotations.scala:2511)
+	at scala.meta.internal.pc.MetalsInteractive$.enclosingSymbolsWithExpressionType(MetalsInteractive.scala:261)
+	at scala.meta.internal.pc.MetalsInteractive$.enclosingSymbols(MetalsInteractive.scala:167)
+	at scala.meta.internal.pc.PcDefinitionProvider.findDefinitions(PcDefinitionProvider.scala:91)
+	at scala.meta.internal.pc.PcDefinitionProvider.definitions(PcDefinitionProvider.scala:56)
+	at scala.meta.internal.pc.PcDefinitionProvider.definitions(PcDefinitionProvider.scala:33)
+
+2023.06.11 11:56:21 WARN  no build target for: /Users/aleksander.blaszkiewicz/Documents/repos/pjatk-1st-semester/nbd/scala/src/main/scala/example/Hello.scala
+Exception in thread "pool-3-thread-3" java.lang.InterruptedException
+	at scala.meta.internal.metals.FutureCancelToken.checkCanceled(FutureCancelToken.scala:29)
+	at scala.meta.internal.pc.CompilerAccess.onCompilerJobQueue$$anonfun$1(CompilerAccess.scala:195)
+	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:152)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Jun 11, 2023 11:56:21 AM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: NoDenotation.owner
+java.lang.AssertionError: NoDenotation.owner
+	at dotty.tools.dotc.core.SymDenotations$NoDenotation$.owner(SymDenotations.scala:2511)
+	at scala.meta.internal.pc.MetalsInteractive$.enclosingSymbolsWithExpressionType(MetalsInteractive.scala:261)
+	at scala.meta.internal.pc.MetalsInteractive$.enclosingSymbols(MetalsInteractive.scala:167)
+	at scala.meta.internal.pc.PcDefinitionProvider.findDefinitions(PcDefinitionProvider.scala:91)
+	at scala.meta.internal.pc.PcDefinitionProvider.definitions(PcDefinitionProvider.scala:56)
+	at scala.meta.internal.pc.PcDefinitionProvider.definitions(PcDefinitionProvider.scala:33)
+
+2023.06.11 11:56:37 WARN  no build target for: /Users/aleksander.blaszkiewicz/Documents/repos/pjatk-1st-semester/nbd/scala/src/main/scala/example/Hello.scala
+2023.06.11 11:57:01 WARN  no build target for: /Users/aleksander.blaszkiewicz/Documents/repos/pjatk-1st-semester/nbd/scala/src/main/scala/example/Hello.scala
+2023.06.11 11:57:30 WARN  no build target for: /Users/aleksander.blaszkiewicz/Documents/repos/pjatk-1st-semester/nbd/scala/src/main/scala/example/Hello.scala
+2023.06.11 11:58:12 WARN  no build target for: /Users/aleksander.blaszkiewicz/Documents/repos/pjatk-1st-semester/nbd/scala/src/main/scala/example/Hello.scala
