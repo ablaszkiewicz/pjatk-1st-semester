@@ -25,10 +25,12 @@ services:
     volumes:
       - ./.localstack/create-resources.sh:/docker-entrypoint-initaws.d/create-resources.sh
     healthcheck:
-      test: awslocal sqs get-queue-url --queue-name bolid--logger
-        && awslocal sqs get-queue-url --queue-name bolid--monitor
+      test: awslocal sqs get-queue-url --queue-name topic--logger
+        && awslocal sqs get-queue-url --queue-name topic--monitor
         && awslocal sqs get-queue-url --queue-name bolid--master
         && awslocal sqs get-queue-url --queue-name master--bolid
+        && awslocal sqs get-queue-url --queue-name failure--mechanic
+        && awslocal sqs get-queue-url --queue-name failure--bolid
 
       interval: 5s
       timeout: 10s

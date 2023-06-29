@@ -49,10 +49,10 @@ export class BolidService {
   async ask() {
     const message: BolidRequest = {};
 
-    // await this.sqsService.send('bolid--master', {
-    //   body: JSON.stringify(message),
-    //   id: v4(),
-    // });
+    await this.sqsService.send('bolid--master', {
+      body: JSON.stringify(message),
+      id: v4(),
+    });
   }
 
   @SqsMessageHandler('master--bolid', false)
