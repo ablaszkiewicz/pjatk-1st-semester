@@ -37,6 +37,12 @@ const sqsClient = new SQSClient({
           region: 'us-east-1',
           sqs: sqsClient,
         },
+        {
+          name: 'failure--bolid',
+          queueUrl: `${process.env.LOCALSTACK_ENDPOINT}/000000000000/failure--bolid`,
+          region: 'us-east-1',
+          sqs: sqsClient,
+        },
       ],
     }),
   ],

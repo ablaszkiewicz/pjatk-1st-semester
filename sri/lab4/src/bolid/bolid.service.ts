@@ -1,3 +1,4 @@
+import { PublishCommand, SNSClient } from '@aws-sdk/client-sns';
 import { Message } from '@aws-sdk/client-sqs';
 import { Injectable } from '@nestjs/common';
 import { Cron, CronExpression } from '@nestjs/schedule';
@@ -16,12 +17,16 @@ export interface BolidRequest {
 
 @Injectable()
 export class BolidService {
-  constructor(private readonly sqsService: SqsService) {
-    setTimeout(async () => {
-      await sqsService.purgeQueue('bolid--topic');
-      console.log('Purged queues');
-    }, 100);
-  }
+  private snsClient = new SNSClient({
+    region: 'us-east-1',
+    credentials: {
+      accessKeyId: 'test',
+      secretAccessKey: 'test',
+    },
+    endpoint: `${process.env.LOCALSTACK_ENDPOINT}`,
+  });
+
+  constructor(private readonly sqsService: SqsService) {}
 
   @Cron(CronExpression.EVERY_SECOND)
   async report() {
@@ -31,20 +36,23 @@ export class BolidService {
       date: new Date().toISOString(),
     };
 
-    await this.sqsService.send('bolid--topic', {
-      body: JSON.stringify(message),
-      id: v4(),
-    });
+    await this.snsClient.send(
+      new PublishCommand({
+        Message: JSON.stringify(message),
+        TopicArn: `arn:aws:sns:us-east-1:000000000000:topic`,
+        Subject: 'Bolid message',
+      }),
+    );
   }
 
   @Cron(CronExpression.EVERY_5_SECONDS)
   async ask() {
     const message: BolidRequest = {};
 
-    await this.sqsService.send('bolid--master', {
-      body: JSON.stringify(message),
-      id: v4(),
-    });
+    // await this.sqsService.send('bolid--master', {
+    //   body: JSON.stringify(message),
+    //   id: v4(),
+    // });
   }
 
   @SqsMessageHandler('master--bolid', false)
@@ -53,6 +61,17 @@ export class BolidService {
 
     console.log(
       `[BOLID]: Received approval from master. Approval status: ${parsed.approved}`,
+    );
+  }
+
+  @SqsMessageHandler('failure--bolid', false)
+  public async receiveFromFailureTopic(message: Message) {
+    const parsedBody = JSON.parse(message.Body);
+
+    console.log(
+      `[BOLID]: Received message from failure topic with importance ${
+        (parsedBody.MessageAttributes.importance as any).Value
+      }`,
     );
   }
 }

@@ -5,12 +5,13 @@ import { BolidMessage } from 'src/bolid/bolid.service';
 
 @Injectable()
 export class LoggerService {
-  @SqsMessageHandler('bolid--logger', false)
+  @SqsMessageHandler('topic--logger', false)
   public async handleLoggerMessage(message: Message) {
-    const parsed = JSON.parse(message.Body) as BolidMessage;
+    const parsedBody = JSON.parse(message.Body);
+    const parsedMessage = JSON.parse(parsedBody.Message) as BolidMessage;
 
     console.log(
-      `[LOGGER]: Temperature: ${parsed.temperature}, Pressure: ${parsed.pressure}, Date: ${parsed.date}`,
+      `[LOGGER]: Temperature: ${parsedMessage.temperature}, Pressure: ${parsedMessage.pressure}, Date: ${parsedMessage.date}`,
     );
   }
 }

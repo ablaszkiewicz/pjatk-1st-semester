@@ -18,8 +18,8 @@ const sqsClient = new SQSClient({
     SqsModule.register({
       consumers: [
         {
-          name: 'monitor--mechanic',
-          queueUrl: `${process.env.LOCALSTACK_ENDPOINT}/000000000000/monitor--mechanic`,
+          name: 'failure--mechanic',
+          queueUrl: `${process.env.LOCALSTACK_ENDPOINT}/000000000000/failure--mechanic`,
           sqs: sqsClient,
         },
       ],
