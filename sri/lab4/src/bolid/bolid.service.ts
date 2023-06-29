@@ -18,8 +18,7 @@ export interface BolidRequest {
 export class BolidService {
   constructor(private readonly sqsService: SqsService) {
     setTimeout(async () => {
-      await sqsService.purgeQueue('bolid--logger');
-      await sqsService.purgeQueue('bolid--monitor');
+      await sqsService.purgeQueue('bolid--topic');
       console.log('Purged queues');
     }, 100);
   }
@@ -32,12 +31,7 @@ export class BolidService {
       date: new Date().toISOString(),
     };
 
-    await this.sqsService.send('bolid--logger', {
-      body: JSON.stringify(message),
-      id: v4(),
-    });
-
-    await this.sqsService.send('bolid--monitor', {
+    await this.sqsService.send('bolid--topic', {
       body: JSON.stringify(message),
       id: v4(),
     });

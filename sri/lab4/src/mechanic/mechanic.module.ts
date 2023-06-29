@@ -1,9 +1,9 @@
 import { Module } from '@nestjs/common';
-import { LoggerService } from './logger.service';
-import { LoggerController } from './logger.controller';
+import { MechanicService } from './mechanic.service';
+import { MechanicController } from './mechanic.controller';
 import { SQSClient } from '@aws-sdk/client-sqs';
-import { SqsModule } from '@ssut/nestjs-sqs';
-require('dotenv').config();
+import { SqsModule } from '@ssut/nestjs-sqs/dist/sqs.module';
+
 const sqsClient = new SQSClient({
   region: 'us-east-1',
   credentials: {
@@ -18,14 +18,14 @@ const sqsClient = new SQSClient({
     SqsModule.register({
       consumers: [
         {
-          name: 'topic--logger',
-          queueUrl: `${process.env.LOCALSTACK_ENDPOINT}/000000000000/topic--logger`,
+          name: 'monitor--mechanic',
+          queueUrl: `${process.env.LOCALSTACK_ENDPOINT}/000000000000/monitor--mechanic`,
           sqs: sqsClient,
         },
       ],
     }),
   ],
-  controllers: [LoggerController],
-  providers: [LoggerService],
+  controllers: [MechanicController],
+  providers: [MechanicService],
 })
-export class LoggerModule {}
+export class MechanicModule {}

@@ -18,14 +18,8 @@ const sqsClient = new SQSClient({
     SqsModule.register({
       producers: [
         {
-          name: 'bolid--logger',
-          queueUrl: `${process.env.LOCALSTACK_ENDPOINT}/000000000000/bolid--logger`,
-          region: 'us-east-1',
-          sqs: sqsClient,
-        },
-        {
-          name: 'bolid--monitor',
-          queueUrl: `${process.env.LOCALSTACK_ENDPOINT}/000000000000/bolid--monitor`,
+          name: 'bolid--topic',
+          queueUrl: `${process.env.LOCALSTACK_ENDPOINT}/000000000000/bolid--topic`,
           region: 'us-east-1',
           sqs: sqsClient,
         },

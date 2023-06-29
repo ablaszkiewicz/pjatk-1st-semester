@@ -14,15 +14,13 @@ const sqsClient = new SQSClient({
   endpoint: `${process.env.LOCALSTACK_ENDPOINT}`,
 });
 
-console.log(process.env.LOCALSTACK_ENDPOINT);
-
 @Module({
   imports: [
     SqsModule.register({
       consumers: [
         {
-          name: 'bolid--monitor',
-          queueUrl: `${process.env.LOCALSTACK_ENDPOINT}/000000000000/bolid--monitor`,
+          name: 'topic--monitor',
+          queueUrl: `${process.env.LOCALSTACK_ENDPOINT}/000000000000/topic--monitor`,
           sqs: sqsClient,
         },
       ],

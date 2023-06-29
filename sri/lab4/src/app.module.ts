@@ -5,6 +5,7 @@ import { LoggerModule } from './logger/logger.module';
 import { ScheduleModule } from '@nestjs/schedule';
 import { MonitorModule } from './monitor/monitor.module';
 import { MasterModule } from './master/master.module';
+import { MechanicModule } from './mechanic/mechanic.module';
 
 @Module({
   imports: [
@@ -14,6 +15,7 @@ import { MasterModule } from './master/master.module';
     ScheduleModule.forRoot(),
     MonitorModule,
     MasterModule,
+    MechanicModule,
   ],
   controllers: [],
   providers: [],
